@@ -3,6 +3,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "carbon-fileuploader-angular": [
+        "dist/carbon-fileuploader-angular/carbon-fileuploader-angular",
+        "dist/carbon-fileuploader-angular"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "carbon-fileuploader-angular": {
+      "projectType": "library",
+      "root": "projects/carbon-fileuploader-angular",
+      "sourceRoot": "projects/carbon-fileuploader-angular/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/carbon-fileuploader-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/carbon-fileuploader-angular/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/carbon-fileuploader-angular/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/carbon-fileuploader-angular/src/test.ts",
+            "tsConfig": "projects/carbon-fileuploader-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/carbon-fileuploader-angular/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "carbon-fileuploader-angular"
 }
